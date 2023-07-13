@@ -13,7 +13,7 @@ function amountSmall(){
       incrementSmall() {
          this.amount += 49.00;
       },
-      
+
       decrementSmall(){
          if(this.amount > 0){
             this.amount-= 49.00
@@ -42,8 +42,10 @@ function amountSmall(){
       },
 
       totalCost(){
-         if(incrementSmall()){
-            totalCosts.push(amount)
+         if(amount >0 && medAmount >0 && lrgAmount >0){
+            this.totalCosts = amount 
+            this.totalCosts = medAmount 
+            this.totalCosts = lrgAmount 
          }
       }
    }
@@ -52,9 +54,5 @@ function amountSmall(){
 document.addEventListener('alpine:init', ()=> {
    Alpine.data('amountSmall',amountSmall)
 })
-
-
-
-
 
 
